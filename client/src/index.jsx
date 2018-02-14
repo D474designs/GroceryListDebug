@@ -24,8 +24,8 @@ class App extends React.Component {
         description: description,
         quantity: quantity
       })
-    }).done(({groceryList}) => {
-      this.setState({list: groceryList});
+    }).done(() => {
+      this.getGroceries();
     });
   }
 
@@ -33,8 +33,8 @@ class App extends React.Component {
     $.ajax({
       url: '/groceries',
       method: 'GET',
-      success: ({groceryList}) => {
-        this.setState({list: groceryList});
+      success: (results) => {
+        this.setState({list: results});
       },
       error: (xhr, err) => {
         console.log('err', err);

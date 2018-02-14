@@ -2,7 +2,7 @@ import React from 'react';
 import GroceryItem from './GroceryItem.jsx'
 const GroceryList = (props) => (
   <div className="groceries">
-  {props.list.map((item, index) => <GroceryItem item={item} key={index}/>)}
+  {props.list.map((item) => <GroceryItem item={item} key={item.id} />)}
   </div>
 )
 
