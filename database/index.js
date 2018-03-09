@@ -4,7 +4,7 @@ var password = require('../passwords.js');
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: password.mysqlPassword,
+  password: 'Holacode',
   database: "review"
 });
 
@@ -29,6 +29,3 @@ var insertOne = function(description, quantity, cb) {
       }
     });
 };
-
-module.exports.selectAll = selectAll;
-module.exports.insertOne = insertOne;
