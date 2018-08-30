@@ -1,5 +1,5 @@
 import React from 'react';
-const GroceryItem = (props) => (
-  <div></div>
+const GroceryList = (props) => (
+  <div className="groceries"></div>
 )
-export default GroceryItem;
+export default GroceryList;
