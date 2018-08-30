@@ -27,8 +27,8 @@ class App extends React.Component {
   render() {
     return (<div>
       <h1>Grocery List</h1>
-      <AddGrocery addItem={this.addGroceryItem}/>
-      <GroceryList list={this.state.list}/>
+      <AddGrocery addItem={}/>
+      <GroceryList list={}/>
     </div>)
   }
 }
