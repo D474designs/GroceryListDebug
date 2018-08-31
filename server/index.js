@@ -14,6 +14,7 @@ app.get('/grocery', function(req, res){
       res.sendStatus(500);
     } else {
       //FINISH THIS
+      res.status(200).json(results);
   }
   })
 })

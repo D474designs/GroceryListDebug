@@ -14,10 +14,20 @@ class App extends React.Component {
 
   addGroceryItem(description, quantity) {
     //Fill this out with axios
+    axios.post(`/data`, { description, quantity })
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })
   }
 
   getGroceries() {
     //Fill this out with axios
+    axios.get(`/data`)
+  .then(res => {
+    const data = res.data;
+    this.setState({ description, quantity});
+  });
   }
 
   componentDidMount() {
@@ -27,8 +37,23 @@ class App extends React.Component {
   render() {
     return (<div>
       <h1>Grocery List</h1>
-      <AddGrocery addItem={}/>
-      <GroceryList list={}/>
+      <AddGrocery addItem={description, quantity}/>
+      <GroceryList list={description, quantity}/>
+
+//       <ul>
+//   { this.state.data.map(data => <li>{data.description} {data.quantity}</li>)}
+// </ul>
+
+  // <div>
+  //   <form onSubmit={this.handleSubmit}>
+  //     <label>
+  //       Person Name:
+  //       <input type="text" name="name" onChange={this.handleChange} />
+  //     </label>
+  //     <button type="submit">Add</button>
+  //   </form>
+  // </div>
+
     </div>)
   }
 }
